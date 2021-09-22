@@ -1,0 +1,39 @@
+:host {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.row-layout {
+  max-width: 100%;
+  max-height: 100%;
+  align-items: stretch;
+  position: relative;
+  width: 100%;
+  min-width: 50px;
+  min-height: 50px;
+  flex: 1 1 0;
+}
+.row-layout_1 {
+  align-items: stretch;
+  position: relative;
+  width: 100%;
+  min-width: 50px;
+  min-height: 50px;
+  flex: 1 1 0;
+}
+.grid {
+  width: 100%;
+  height: 90%;
+  min-width: 50px;
+  min-height: 50px;
+}
+.igx-column {
+  width: 500px;
+  height: 200px;
+  min-width: 50px;
+  min-height: 50px;
+}
+.row {
+  display: flex;
+}
