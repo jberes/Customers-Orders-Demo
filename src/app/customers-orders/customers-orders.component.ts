@@ -18,4 +18,9 @@ export class CustomersOrdersComponent implements OnInit {
     this.northwindCustomers = this.northwindService.getData('Customers');
     this.northwindOrders = this.northwindService.getData('Orders');
   }
+
+    rowSelected(selection: any){
+      const customerId = selection[0].CustomerID;
+      this.northwindOrders = this.northwindService.getOrders(customerId);
+    }
 }

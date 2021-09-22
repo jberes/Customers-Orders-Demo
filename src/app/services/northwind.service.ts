@@ -8,4 +8,8 @@ export class NorthwindService {
   getData(tableName: string): any[] {
     return Northwind[tableName];
   }
+
+  getOrders(customerId: string): any[] {
+    return Northwind["Orders"].filter(order => order.CustomerID == customerId);
+  }
 }

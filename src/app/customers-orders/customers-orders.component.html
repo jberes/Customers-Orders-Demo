@@ -1,5 +1,5 @@
 <div class="row-layout row">
-  <igx-grid [data]="northwindCustomers" [autoGenerate]="false" width="100%" height="90%" class="grid">
+  <igx-grid [data]="northwindCustomers" [autoGenerate]="false" width="100%" height="90%" class="grid" rowSelection="single" [hideRowSelectors]="true" (rowSelected)="rowSelected($event.newSelection)"  >
     <igx-column field="customerID" header="customerID" title="customerID" dataType="string" class="igx-column"></igx-column>
     <igx-column field="companyName" header="companyName" title="companyName" dataType="string" class="igx-column"></igx-column>
     <igx-column field="contactName" header="contactName" title="contactName" dataType="string" class="igx-column"></igx-column>
