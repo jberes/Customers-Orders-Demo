@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FullNorthwindCustomersService } from '../services/full-northwind-customers.service';
-import { FullNorthwindOrdersService } from '../services/full-northwind-orders.service';
+import { NorthwindService } from '../services/northwind.service';
 
 @Component({
   selector: 'app-customers-orders',
@@ -8,16 +7,15 @@ import { FullNorthwindOrdersService } from '../services/full-northwind-orders.se
   styleUrls: ['./customers-orders.component.scss']
 })
 export class CustomersOrdersComponent implements OnInit {
-  public fullNorthwindCustomersCustomers: any[] = [];
-  public fullNorthwindOrdersOrders: any[] = [];
+  public northwindCustomers: any[] = [];
+  public northwindOrders: any[] = [];
 
   constructor(
-    private fullNorthwindCustomersService: FullNorthwindCustomersService,
-    private fullNorthwindOrdersService: FullNorthwindOrdersService,
+    private northwindService: NorthwindService,
   ) {}
 
   ngOnInit() {
-    this.fullNorthwindCustomersCustomers = this.fullNorthwindCustomersService.getData('Customers');
-    this.fullNorthwindOrdersOrders = this.fullNorthwindOrdersService.getData('Orders');
+    this.northwindCustomers = this.northwindService.getData('Customers');
+    this.northwindOrders = this.northwindService.getData('Orders');
   }
 }
