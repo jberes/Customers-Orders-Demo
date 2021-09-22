@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CustomersOrdersComponent } from './customers-orders/customers-orders.component';
 import { IgxGridModule, IgxNavbarModule, IgxButtonModule, IgxToggleModule, IgxIconModule, IgxNavigationDrawerModule } from 'igniteui-angular';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { FormsModule } from '@angular/forms';
     HammerModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     IgxGridModule,
     FormsModule,
     IgxNavbarModule,
